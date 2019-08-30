@@ -1,0 +1,32 @@
+service: cru-udp-aa-sync
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: production
+  region: us-east-1
+  environment: ${file(serverless/environment.js)}
+  $<<: ${file(serverless/provider.js)}
+
+functions:
+  aa-sync:
+    handler: handlers/aa-sync.handler
+    timeout: 120
+    events:
+      - schedule: rate(12 hours)
+
+package:
+  exclude:
+    - .git/**
+    - .serverless/**
+    - .deployment/**
+
+plugins:
+  - '@cruglobal/serverless-merge-config'
+  - serverless-webpack
+
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+    packager: yarn

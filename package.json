@@ -1,0 +1,33 @@
+{
+  "name": "cru-udp-aa-sync",
+  "version": "1.0.0",
+  "description": "CRU User Data Platform / Adobe Analytics placement sync (λ functions)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CruGlobal/cru-udp-aa-sync"
+  },
+  "author": "Brian Zoetewey <brian.zoetewey@cru.org>",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": "> 10.0.0"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "@cruglobal/serverless-merge-config": "^1.1.0",
+    "aws-sdk": "^2.520.0",
+    "dotenv": "^8.1.0",
+    "serverless": "^1.51.0",
+    "serverless-webpack": "^5.3.1",
+    "standard": "^14.1.0",
+    "webpack": "^4.39.3",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "rollbar": "^2.12.3",
+    "ssh2-sftp-client": "^4.0.3"
+  }
+}
