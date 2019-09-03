@@ -1,6 +1,6 @@
 'use strict'
 
-import { includes } from 'lodash-es'
+import includes from 'lodash/includes'
 import Rollbar from 'rollbar'
 
 module.exports = new Rollbar({
