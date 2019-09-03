@@ -27,6 +27,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "lodash-es": "^4.17.15",
     "rollbar": "^2.12.3",
     "ssh2-sftp-client": "^4.0.3"
   }

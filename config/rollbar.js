@@ -1,7 +1,7 @@
 'use strict'
 
-const Rollbar = require('rollbar')
-const { includes } = require('lodash')
+import { includes } from 'lodash-es'
+import Rollbar from 'rollbar'
 
 module.exports = new Rollbar({
   // https://rollbar.com/docs/notifier/rollbar.js/#configuration-reference
