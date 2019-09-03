@@ -1,7 +1,7 @@
 {
   "name": "cru-udp-aa-sync",
   "version": "1.0.0",
-  "description": "CRU User Data Platform / Adobe Analytics placement sync (λ functions)",
+  "description": "Cru User Data Platform / Adobe Analytics placement sync (λ functions)",
   "repository": {
     "type": "git",
     "url": "https://github.com/CruGlobal/cru-udp-aa-sync"
