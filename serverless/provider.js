@@ -1,6 +1,6 @@
 'use strict'
 
-import { includes, filter, isEmpty, join } from 'lodash-es'
+const { includes, filter, isEmpty, join } = require('lodash-es')
 
 module.exports = () => {
   if (includes(['staging', 'production'], process.env.ENVIRONMENT)) {
