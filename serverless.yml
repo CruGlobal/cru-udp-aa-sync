@@ -6,6 +6,26 @@ provider:
   stage: production
   region: us-east-1
   environment: ${file(serverless/environment.js)}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - S3:ListBucket
+      Resource:
+        Fn::Join:
+          - ''
+          - - 'arn:aws:s3:::'
+            - ${env:S3_ECID_BUCKET}
+    - Effect: Allow
+      Action:
+        - S3:GetObject
+        - S3:PutObject
+        - S3:DeleteObject
+      Resource:
+        Fn::Join:
+          - ''
+          - - 'arn:aws:s3:::'
+            - ${env:S3_ECID_BUCKET}
+            - '/*'
   $<<: ${file(serverless/provider.js)}
 
 functions:
