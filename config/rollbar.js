@@ -3,7 +3,7 @@
 import includes from 'lodash/includes'
 import Rollbar from 'rollbar'
 
-module.exports = new Rollbar({
+export default new Rollbar({
   // https://rollbar.com/docs/notifier/rollbar.js/#configuration-reference
   accessToken: process.env.ROLLBAR_ACCESS_TOKEN,
   // Enable rollbar on staging and production
