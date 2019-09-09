@@ -35,11 +35,11 @@ export const handler = async (lambdaEvent) => {
         // Read file from S3
         const object = await s3.getObject({ Bucket: process.env.S3_ECID_BUCKET, Key }).promise()
         // Write object file to SFTP with .csv extension
-        await client.put(object.Body, `${filename}.csv`, { encoding: null })
+        await client.put(object.Body, `${filename}.csv`, { encoding: null, autoClose: true })
         // Sleep for 2 sec, Adobe seemed to have hiccups if fin file was written too quickly
         await (new Promise(resolve => setTimeout(resolve, 5000)))
         // Write empty .fin file to SFTP
-        await client.put(Buffer.from([]), `${filename}.fin`, { encoding: 'utf8' })
+        await client.put(Buffer.from([]), `${filename}.fin`, { encoding: null, autoClose: true })
         // Copy S3 object to completed_uploads
         await s3.copyObject({
           Bucket: process.env.S3_ECID_BUCKET,
