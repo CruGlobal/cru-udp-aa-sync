@@ -20,6 +20,7 @@
     "@cruglobal/serverless-merge-config": "^1.1.0",
     "aws-sdk": "^2.520.0",
     "dotenv": "^8.1.0",
+    "rollbar-sourcemap-webpack-plugin": "^2.5.1",
     "serverless": "^1.51.0",
     "serverless-webpack": "^5.3.1",
     "standard": "^14.1.0",

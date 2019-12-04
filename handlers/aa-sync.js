@@ -55,7 +55,7 @@ export const handler = async (lambdaEvent) => {
       })
     }
   } catch (error) {
-    rollbar.error('aa-sync error', error)
+    await rollbar.error('aa-sync error', error)
     throw error
   }
 }
