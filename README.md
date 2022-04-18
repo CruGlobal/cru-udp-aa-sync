@@ -4,7 +4,7 @@ Cru User Data Platform / Adobe Analytics placement sync (λ functions)
 This repo contains a single lambda function that runs on a schedule and copies CSV files created by the UDP pipeline to Adobe Analytics customer attributes FTP server.
 
 ## Requirements
-* NodeJS >= 10
+* NodeJS >= 16
 
 ## Installation
 Clone the repository and install dependencies:
