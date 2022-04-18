@@ -7,29 +7,28 @@
     "url": "https://github.com/CruGlobal/cru-udp-aa-sync"
   },
   "author": "Brian Zoetewey <brian.zoetewey@cru.org>",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "private": true,
   "engines": {
-    "node": "> 10.0.0"
+    "node": "> 16.0.0"
   },
   "scripts": {
-    "lint": "standard",
-    "test": "jest --coverage"
+    "lint": "standard --verbose",
+    "test": "jest --detectOpenHandles --coverage"
   },
   "devDependencies": {
-    "@cruglobal/serverless-merge-config": "^1.1.0",
-    "aws-sdk": "^2.520.0",
-    "dotenv": "^8.1.0",
-    "rollbar-sourcemap-webpack-plugin": "^2.5.1",
-    "serverless": "^1.51.0",
-    "serverless-webpack": "^5.3.1",
-    "standard": "^14.1.0",
-    "webpack": "^4.39.3",
-    "webpack-node-externals": "^1.7.2"
+    "aws-sdk": "^2.1116.0",
+    "dotenv": "^16.0.0",
+    "rollbar-sourcemap-webpack-plugin": "^3.3.0",
+    "serverless": "^3.14.0",
+    "serverless-webpack": "^5.7.0",
+    "standard": "^16.0.4",
+    "webpack": "^5.72.0",
+    "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
-    "rollbar": "^2.12.3",
-    "ssh2-sftp-client": "^4.0.3"
+    "lodash": "^4.17.21",
+    "rollbar": "^2.25.0",
+    "ssh2-sftp-client": "^8.0.0"
   }
 }
